@@ -2,9 +2,9 @@
 
 
 $servername = "localhost";
-$username = "codeaxei_fsdftrtfgdfg";
-$password = "R8dfE4cCL@pGWUi";
-$db = "codeaxei_sdfsdfsdfsdfsd";
+$username = "";
+$password = "";
+$db = "";
 
 $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error) {
