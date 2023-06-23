@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PoetryApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/Blue</item>
+        <item name="android:statusBarColor">@color/Blue</item>
+        <item name="android:navigationBarColor">@color/Blue</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="Theme.PoetryApp" parent="Base.Theme.PoetryApp" />
+</resources>

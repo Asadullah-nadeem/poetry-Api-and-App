@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_poetname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/darker_grotesque_bold"
+        android:gravity="center_vertical"
+        android:background="#F44336"
+        android:text="Mohammad Iqbal"
+        android:minHeight="30dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textview_poetryData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/darker_grotesque_bold"
+        android:gravity="center_vertical"
+        android:minHeight="30dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:padding="5dp"
+        android:textSize="15sp"
+        android:background="@android:color/black"
+        android:text="ḳhudī ko kar buland itnā ki har taqdīr se pahle ḳhudā bande se ḳhud pūchhe batā terī razā kyā hai"
+        android:textColor="@android:color/white"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/textview_poetryDateandtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/darker_grotesque_bold"
+        android:gravity="right"
+        android:textSize="15sp"
+        android:minHeight="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@android:color/black"
+        android:text="2023-06-21 20:50:55"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/update_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#2196F3"
+            android:text="Update" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#2196F3"
+            android:text="Delete" />
+    </LinearLayout>
+</LinearLayout>
