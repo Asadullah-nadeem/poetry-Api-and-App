@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         apiinterface = retrofit.create(Apiinterface.class);
         toolbar = findViewById(R.id.main_toolbar);
         progressBar = findViewById(R.id.progressBar);
-
     }
 
     private void setAdapter(List<PoetryModel> poetryModels) {
@@ -77,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
         apiinterface.getpoetry().enqueue(new Callback<GetPoetryResponse>() {
             @Override
             public void onResponse(Call<GetPoetryResponse> call, Response<GetPoetryResponse> response) {
-                hideProgressBar(); // Hide ProgressBar after the API response
+                hideProgressBar();
 
                 try {
                     if (response != null) {
                         if (response.body().getStatus().equals("1")) {
-                            poetryModelList = response.body().getData(); // Update the poetryModelList
+                            poetryModelList = response.body().getData();
                             setAdapter(poetryModelList);
                         } else {
                             Toast.makeText(MainActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetPoetryResponse> call, Throwable t) {
-                hideProgressBar(); // Hide ProgressBar on API call failure
+                hideProgressBar();
                 Log.e("failure", t.getLocalizedMessage());
             }
         });
@@ -121,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void refreshData() {
-        getData(); // Call the API again to fetch updated data
+        poetryModelList.clear();
+        poetryAdapter.notifyDataSetChanged();
+        getData();
     }
 }
